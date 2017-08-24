@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IFE JavaScript Task 01</title>
+    </head>
+    <body>
+
+        <h3>污染城市列表</h3>
+        <ul id="aqi-list">
+            <!--<li>第一名：福州（样例），10</li>
+            <li>第二名：福州（样例），10</li>-->
+        </ul>
+    <script type="text/javascript">
+    var aqiData = [
+        ["北京",90],
+        ["上海",50],
+        ["福州",10],
+        ["广州",50],
+        ["成都",90],
+        ["西安",100]
+    ];
+
+    (function (){
+        // 在注释下方编写代码
+        // 遍历读取aqiData中各个城市的数据
+        // 将空气质量指数大于60的城市显示到aqi-list的列表中
+        
+        var ul = document.getElementsByTagName("ul")[0];
+
+        var filtered = aqiData.filter(function(a){//filter()方法创建一个数组，新数组中的元素是通过检查指定数组符合条件的所有元素
+            return (a[1] > 60);
+        })
+
+        filtered.sort(function(a,b){//function的作用是比较两个数的大小,然后返回结果的正负作为排序的依据.
+                                    //这个函数是逆序排序,如果想升序排序改成return a-b;就行了.
+            return b[1]-a[1];
+        });
+
+        filtered.forEach(function(element,index,array){// forEach方法中的function回调有三个参数：第一个参数是遍历的数组内容，第二个参数是对应的数组索引，第三个参数是数组本身
+            ul.appendChild(document.createElement("li")).innerHTML+="第"+[index+1]+"名: "+element;
+        })
+    })();
+    </script>
+    </body>
+</html>
