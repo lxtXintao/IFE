@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title="task08"></title>
+
+
+        <style>
+            body {
+                font-size: 20px;
+            }
+            
+            #button {
+                color: #fff;
+                background: #1874cd;
+                border: none;
+                border-radius: 3px;
+                padding: 6px;
+            }
+            
+            input {
+                border: 1px solid #b1b1b1;
+                border-radius: 5px;
+                width: 200px;
+                height: 25px;
+            }
+            
+            #info {
+                font-size: 18px;
+                color: #b1b1b1;
+                margin-left: 47px;
+            }
+        </style>
+</head>
+
+<body>
+    <div>
+        <label class="tag" for="name">名称</label>
+        <input type="text" name="name" id="name" minlength="4" maxlength="16">
+        <button id="button" type="submit" onclick="validate()">验证</button>
+        <p id="info">必填，长度为4-16个字符</p>
+    </div>
+    <script type="text/javascript">
+        function validate() {
+            var name = document.getElementById('name');
+            var button = document.getElementById('button');
+            var info = document.getElementById('info');
+            var len = 0;
+
+            var text = name.value;
+            for (var i = 0; i < text.length; i++) {
+                if (EnTe(text[i])) {
+                    len += 1;
+                }
+                else if (ChTe(text[i])) {
+                    len += 2;
+                }
+            }
+
+            if (len >= 4 && len <= 16) {
+                info.innerHTML = "名称格式正确";
+                name.style.borderColor = "green";
+                info.style.color = "green";
+            }
+            else if (name.value == "") {
+                info.innerHTML = "姓名不能为空";
+                name.style.borderColor = "red";
+                info.style.color = "red";
+            } else {
+                info.innerHTML = "必填，长度为4-16个字符";
+                name.style.borderColor = "red";
+                info.style.color = "red";
+            }
+        }
+
+        function EnTe(a) {
+            return /^\w+$/.test(a);
+        }
+        function ChTe(a) {
+            return /^[\u400-\u9fa5]$/.test(a);
+        }
+    </script>
+</body>
+
+</html>
