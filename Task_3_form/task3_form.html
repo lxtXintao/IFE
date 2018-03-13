@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>task3_form</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        div {
+            margin: 20px auto;
+            height: 200px;
+        }
+
+        div:first-child {
+            justify-content: center;
+            display: flex;
+            height: 40px;
+        }
+
+        div {
+            height: 40px;
+        }
+
+        input[type="text"] {
+            width: 200px;
+        }
+
+        select {
+            margin-left: 15px;
+        }
+
+        #cityschool,
+        #comp {
+            text-align: center;/*将div元素居中*/
+            display: none;/*将div元素隐藏*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input id="yes" type="radio" name="isstu" value="在校生" />在校生
+        <input id="no" type="radio" name="isstu" value="非在校生">非在校生
+    </div>
+    <div id="cityschool">
+        <label>城市</label>
+        <select id="province" name="province">
+            <option>北京</option>
+            <option>河北</option>
+            <option>山东</option>
+        </select>
+        <select id="school" name="school">
+            <option>北京大学</option>
+            <option>清华大学</option>
+            <option>北京邮电大学</option>
+        </select>
+    </div>
+    <div id="comp">
+        <label for="empunit">就业单位</label>
+        <input id="empunit" type="text">
+    </div>
+    <script type="text/javascript">
+        var yes = document.getElementById("yes");
+        var no = document.getElementById("no");
+        var province = document.getElementById("province");
+        var school = document.getElementById("school");
+        var cityschool = document.getElementById("cityschool");
+        yes.onchange = function () {
+            cityschool.style.display = "block";
+            comp.style.display = "none";
+        }
+        no.onchange = function () {
+            cityschool.style.display = "none";
+            comp.style.display = "block";
+        }
+        province.onchange = function () {
+            react(province.value);
+        };
+        function react(a) {
+            school.options.length = 0;
+            switch (a) {
+                case "北京":
+                    school.add(new Option("北京大学"));
+                    school.add(new Option("清华大学"));
+                    school.add(new Option("北京邮电大学"));
+                    break;
+                case "河北":
+                    school.add(new Option("河北农业大学"));
+                    school.add(new Option("燕山大学"));
+                    school.add(new Option("河北工业大学"));
+                    break;
+                case "山东":
+                    school.add(new Option("山东大学"));
+                    school.add(new Option("山东农业大学"));
+                    school.add(new Option("山东科技大学"));
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
