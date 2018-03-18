@@ -1,0 +1,1 @@
+The problem is that if there are more than one seperators, the program will regard it as a character string and insert a space into the “field” queue。
