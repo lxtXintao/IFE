@@ -1,0 +1,22 @@
+button{
+    margin:10px; 
+}
+.number{
+    width: 40px;
+    height: 40px;
+    background: #f00;
+    color: #fff;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+}
+#field{
+    margin: 10px;
+}
+.selected{
+    background: #0f0;
+    color: aliceblue;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+}
