@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid #000;
+            display: flex;
+        }
+
+        .container {
+            width: 1000px;
+            height: 500px;
+        }
+
+        .child2 {
+            margin-top: 40px;
+            margin-left: 25px;
+            width: 250px;
+            height: 400px;
+        }
+
+        .child3 {
+            margin-top: 40px;
+            margin-left: 30px;
+            width: 460px;
+            height: 400px;
+        }
+
+        .child4 {
+            margin-top: 40px;
+            margin-left: 25px;
+            width: 170px;
+            height: 400px;
+        }
+
+        .child5 {
+            margin-top: 40px;
+            margin-left: 17px;
+            width: 200px;
+            height: 310px;
+        }
+
+        .childof5 {
+            margin-top: 60px;
+            margin-left: 15px;
+            width: 40px;
+            height: 200px;
+        }
+
+        .childof3 {
+            margin-top: 40px;
+            margin-left: 10px;
+            width: 75px;
+            height: 310px;
+        }
+
+        #dfs,
+        #bfs,
+        #dfs_ser,
+        #bfs_ser {
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #fff;
+            background: #34f;
+            font-size: 14px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #ser_txt {
+            margin-top: 20px;
+            margin-left: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button id="dfs">深度优先遍历</button>
+        <button id="bfs">广度优先遍历</button>
+        <input type="text" id="ser_txt">
+        <button id="dfs_ser">深度优先查询</button>
+        <button id="bfs_ser">广度优先查询</button>
+    </section>
+    <div id="1" class="container">1
+        <div id="2" class="child2">2
+            <div id="5" class="child5">5
+                <div id="11" class="childof5">11</div>
+                <div id="12" class="childof5">12</div>
+                <div id="13" class="childof5">13</div>
+            </div>
+        </div>
+        <div id="3" class="child3">3
+            <div id="6" class="childof3">6</div>
+            <div id="7" class="childof3">7</div>
+            <div id="8" class="childof3">8</div>
+            <div id="9" class="childof3">9</div>
+            <div id="10" class="childof3">10</div>
+        </div>
+        <div id="4" class="child4">4</div>
+    </div>
+    <script type="text/Javascript" src="task8.js"></script>
+</body>
+
+</html>
