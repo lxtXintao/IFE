@@ -1,0 +1,1 @@
+The problem is that the "queue" will get bigger as nodes push into it,and every time we click the traverse button, the nodes in the queue will all be shown in page, rether than showing the 15 nodes pushed in just now.
