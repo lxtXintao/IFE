@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        div{
+            border: 1px solid #000;
+            margin: 20px;
+            display: flex;
+            /* flex: wrap; */
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button id="bfs">广度优先遍历</button>
+        <button id="dfs">深度优先遍历</button>
+        <input type="text" id="ser_txt">
+        <button id="bfs_ser">广度优先搜索</button>
+        <button id="dfs_ser">深度优先搜索</button>
+    </section>
+    <section>
+        <button id="del_node">删除节点</button>
+        <input type="text" id="node_txt">
+        <button id="add_node">增加节点</button>
+        <button id="re_color">重置背景颜色</button>
+    </section>
+    <div id="container" data="Super">Super
+        <div id="cat" data="Cat">Cat
+            <div id="apple" data="Apple">Apple</div>
+            <div id="phone" data="Phone">Phone</div>
+            <div id="blank" data="Blank">Blank
+                <div id="book" data="Book">Book</div>
+                <div id="school" data="School">School</div>
+            </div>
+        </div>
+        <div id="note" data="Note">Note
+            <div id="human" data="Human">Human
+                <div id="code" data="Code">Code</div>
+                <div id="operate" data="Operate">Operate</div>
+                <div id="man" data="Man">Man</div>
+            </div>
+            <div id="program" data="Program">Program
+                <div id="bement" data="Bement">Bement
+                    <div id="cat" data="Cat">Cat</div>
+                </div>
+                <div id="glass" data="Glass">Glass</div>
+            </div>
+        </div>
+        <div id="fish" data="Fish">Fish</div>
+    </div>
+    <script type="text/Javascript" src="task9.js"></script>
+</body>
+
+</html>
