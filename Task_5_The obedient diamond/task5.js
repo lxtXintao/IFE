@@ -37,17 +37,6 @@ var angle = 0;
 })();
 
 var root = {
-    xPos: function () {
-        xPos = xPos + "px";
-        return robot.style.left;
-        // return robot.style.top;
-    },
-    yPos: function () {
-        yPos = yPos + "px";
-        return robot.style.top;
-        // alert(robot.style.top);
-        // return robot.style.left;
-    },
     face: function () {
         face = face % 4;
         return face;
