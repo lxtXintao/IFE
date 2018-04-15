@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    -webkit-user-select: none;
+    user-select: none;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif, Arial, Verdana, Sans-serif;
+}
+ul{
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    background: #91d4da;
+    color: white;
+    text-align: center;
+}
+header span{
+    position: absolute;
+    left: 5px;
+    font-size: 1.17rem;
+}
+header span::before{
+    content: "<";
+    display: inline-block;
+}
+header .title{
+    font-weight: normal;
+}
+nav>ul{
+    display: flex;
+    justify-content: space-around;
+    /* height: 3rem; */
+}
+nav>ul>li{
+    display: inline-block;
+    /* display: list-item;此时选项前面有小黑点 */
+    line-height: 3rem;
+    width: 25%;
+    text-align: center;
+}
+nav .select-this{
+    border-bottom: .3rem solid #91d4da;
+}
+.img-wrap img{
+    width: 100%;
+}
+.tag-group>ul{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+.tag-group>ul>li{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+}
+.tag-group>ul>li>img{
+    width: 70%;
+    margin: 0 auto;
+}
+.hr{
+    height: .1rem;
+    background: #ccc;
+}
+.col-3{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+.col{
+    text-align: center;
+    flex: 1;
+}
+.col:not(:last-child){
+    border-right: .1rem solid #ccc;
+}
+.col img{
+    width: 100%;
+    margin: 0 auto;
+}
+.col h2{
+    color: #111;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.col h6{
+    color: #333;
+    font-weight: 500;
+}
+.module{
+    border-top: 1.5rem solid #eee;
+}
+.module h2{
+    font-size: 1.2rem;
+    color: #656565;
+    border-bottom: .2rem solid #eee;
+    margin-left: .3rem;
+}
+.module section{
+    display: flex;
+    margin: 1rem 0;
+}
+.module section img{
+    width: 28%;
+    height: 45%;
+    margin: 0 1%;
+    border: .1rem solid #feb832;
+}
+.module section ul{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.module section ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 45%;
+    background: #eee;
+    margin: 0 3.5% 3.5% 0;
+}
+.module section ul li a{
+    font-size: 0.8rem;
+    color: #000;
+}
+.article{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.article ul li{
+    display: flex;
+    padding: .3rem;
+    border-bottom: 3px solid #eee;
+}
+.article ul li img{
+    width: 32%;
+    height: 80%; 
+}
+.article li img{
+    margin-right: .5rem;
+}
+.article .item-1 li div{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+}
+.article .item-2 li div{
+    width: 100%;
+}
+.article .item-2 li div figure{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.article ul li div h3{
+    font-size: 1.2rem;
+    color: #656565;
+}
+.article ul li div p{
+    font-size: .6rem;
+    color: #c7c7c7;
+}
