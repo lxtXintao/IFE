@@ -1,0 +1,119 @@
+;*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 400px;
+    margin: 0 auto;
+}
+table thead{
+    background: black;
+    color: white;
+}
+table tbody tr{
+    color: black
+}
+table tbody tr:nth-child(odd){
+    background: white;
+}
+table tbody tr:nth-child(even){
+    background: #445566;
+}
+table tbody tr:nth-child(-n+3){
+    color: red;
+}
+.div2{
+    text-align: center;
+    margin-top: 20px;
+}
+.div2 input:first-child{
+    width: 100px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+.div2 input:last-child{
+    width: 100px;
+    height: 20px;
+}
+.div2 input:last-of-type:focus{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #0055cc;
+    border-radius: 5px;
+    -webkit-transition: width 1s linear;
+    -ms-transition:width 1s linear;
+    -moz-transition: width 1s linear;
+    -o-transition: width 1s linear;
+    transition: width 1s linear;
+    box-shadow: 0 0 7px rgba(0,80,192,0.8);
+}
+.div3{
+    margin-top: 20px;
+    padding-top: 20px;
+}
+#mycontent{
+    width: 400px;
+    height: 200px;
+    background: green;
+    margin: 0 auto;
+    position: relative; /* 父元素设为relative，子元素设为absolute，子元素可以相对父元素定位 */
+}
+#mycontent div>div:first-child{
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    z-index: 999;
+}
+#mycontent div>div:first-child a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+#mycontent div[id="con1"] div:first-child{
+    bottom: 0;
+    right: 70px;
+}
+#mycontent div[id="con2"] div:first-child{
+    bottom: 0;
+    right: 35px;
+}
+#mycontent div[id="con3"] div:first-child{
+    bottom: 0;
+    right: 0;
+}
+#con1, #con2, #con3{
+    width: 100%;
+    height: 100%;
+}
+.con1, .con2, .con3{
+    width: 100%;
+    height: 100%;
+}
+.con1{
+    background: green;
+}
+.con2{
+    background: -moz-linear-gradient(to right,green 50%,blue 50%);
+    background: -webkit-linear-gradient(left,green 50%,blue 50%);
+    background: -o-linear-gradient(to right,green 50%,blue 50%);
+    background: linear-gradient(to right,green 50%,blue 50%);
+}
+#con1,#con2,#con3{
+    height: 0;
+    overflow: hidden;
+}
+.con3{
+    background: blue;
+}
+#mycontent :target{
+    height: 100%;
+    z-index: 0;
+}
